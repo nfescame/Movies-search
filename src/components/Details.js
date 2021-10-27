@@ -20,6 +20,7 @@ const Details = (props) => {
 
   const showHiden = () => {
     show ? SetShow(false) : SetShow(true);
+    console.log(show);
   };
 
   return (

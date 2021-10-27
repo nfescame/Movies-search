@@ -6,7 +6,7 @@ export default function NavBar() {
   return (
     <div>
       <nav
-        className='navbar navbar-expand-lg navbar-dark '
+        className='navbar  navbar-dark '
         style={{ backgroundColor: "#7D11F9" }}
       >
         <div className='container-fluid'>
