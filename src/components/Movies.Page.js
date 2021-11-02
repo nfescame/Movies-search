@@ -9,7 +9,7 @@ import { api, keyApi } from "../api/api";
 
 function MoviesPage() {
   const [movies, setMovies] = useState([]);
-  const [search, steSearch] = useState();
+  const [search, steSearch] = useState("star wars");
   const [pageCurrent, setPageCurrent] = useState(1);
   const [totalResults, setTotalResults] = useState();
 
@@ -31,8 +31,16 @@ function MoviesPage() {
 
   const handleChangePage = (event) => {
     const current = parseInt(event.target.name);
-    console.log(totalResults / 10);
-    current <= 1 ? setPageCurrent(1) : setPageCurrent(current);
+
+    if (current <= 1) {
+      setPageCurrent(1);
+    } else {
+      if (current >= totalResults / 10) {
+        setPageCurrent(Math.ceil(totalResults / 10));
+      } else {
+        setPageCurrent(current);
+      }
+    }
   };
 
   const buttonUp = () => {
@@ -57,8 +65,12 @@ function MoviesPage() {
           <MovieList movies={movies} />
         </div>
       </main>
-      <button onClick={buttonUp} type='button' class='btn btn-danger btn-topo'>
-        <i class='bi bi-arrow-up'></i>
+      <button
+        onClick={buttonUp}
+        type='button'
+        className='btn btn-danger btn-topo'
+      >
+        <i className='bi bi-arrow-up'></i>
       </button>
     </div>
   );

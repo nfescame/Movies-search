@@ -83,6 +83,29 @@ header h1 {
 .input-search {
   width: 10px;
 }
+.container-img-info {
+  display: flex;
+}
+
+.container-img {
+  display: flex;
+  width: 60%;
+}
+
+.container-img img {
+  position: relative;
+  width: 12rem;
+  margin: 0 1rem;
+}
+
+.container-info {
+}
+
+.btn-details {
+  position: fixed;
+  left: 0.5rem;
+  top: 0.5rem;
+}
 
 @media only screen and (max-width: 600px) {
   .container-components {

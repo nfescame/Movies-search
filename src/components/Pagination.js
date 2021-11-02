@@ -1,49 +1,51 @@
 import React from "react";
 
 export default function Pagination(props) {
-  const { pageCurrent, setPageCurrent, handleChangePage } = props;
+  const { pageCurrent, handleChangePage } = props;
   return (
     <nav aria-label='Page navigation example'>
-      <ul class='pagination'>
-        <li class='page-item'>
+      <ul className='pagination'>
+        <li className='page-item'>
           <button
-            class='page-link'
-            onClick={() => setPageCurrent(pageCurrent - 1)}
+            className='page-link'
+            name={pageCurrent - 1}
+            onClick={handleChangePage}
           >
             Previous
           </button>
         </li>
-        <li class='page-item'>
+        <li className='page-item'>
           <button
-            class='page-link'
+            className='page-link'
             name={pageCurrent - 1}
             onClick={handleChangePage}
           >
             {pageCurrent - 1}
           </button>
         </li>
-        <li class='page-item'>
+        <li className='page-item'>
           <button
-            class='btn bg-info color-write'
+            className='btn bg-info color-write'
             name={pageCurrent}
             onClick={handleChangePage}
           >
             {pageCurrent}
           </button>
         </li>
-        <li class='page-item'>
+        <li className='page-item'>
           <button
-            class='page-link'
+            className='page-link'
             name={pageCurrent + 1}
             onClick={handleChangePage}
           >
             {pageCurrent + 1}
           </button>
         </li>
-        <li class='page-item'>
+        <li className='page-item'>
           <button
-            class='page-link '
-            onClick={() => setPageCurrent(pageCurrent + 1)}
+            className='page-link '
+            name={pageCurrent + 1}
+            onClick={handleChangePage}
           >
             Next
           </button>

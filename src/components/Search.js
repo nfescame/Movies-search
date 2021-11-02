@@ -6,7 +6,7 @@ export default function Search(props) {
       <div className='input-group mb-3'>
         <div className='input-group-prepend'>
           <span className='input-group-text' id='basic-addon1'>
-            <i class='bi bi-search'></i>
+            <i className='bi bi-search'></i>
           </span>
         </div>
         <input

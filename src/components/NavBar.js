@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
   const [show, setShow] = useState(false);
-  console.log(show);
+
   return (
     <div>
       <nav
@@ -10,9 +11,9 @@ export default function NavBar() {
         style={{ backgroundColor: "#7D11F9" }}
       >
         <div className='container-fluid'>
-          <a className='navbar-brand' href='#'>
+          <Link className='navbar-brand' to='#'>
             Movies
-          </a>
+          </Link>
           <button
             className='navbar-toggler'
             type='button'
