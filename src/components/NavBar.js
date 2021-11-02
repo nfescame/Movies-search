@@ -39,8 +39,8 @@ export default function NavBar() {
             textDecoration: "none",
           }}
         >
-          <a href='/'>Home</a>
-          <a href='/movies'>Movies</a>
+          <a href='/home'>Home</a>
+          <a href='/'>Movies</a>
         </div>
       ) : null}
     </div>

@@ -9,8 +9,8 @@ const Routes = () => {
   return (
     <BrowserRouter>
       <NavBar />
-      <Route path='/' component={HomePage} exact />
-      <Route path='/movies' component={MoviesPage} exact />
+      <Route path='/home' component={HomePage} exact />
+      <Route path='/' component={MoviesPage} exact />
     </BrowserRouter>
   );
 };
