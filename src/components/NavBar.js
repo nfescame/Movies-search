@@ -39,7 +39,6 @@ export default function NavBar() {
             textDecoration: "none",
           }}
         >
-          <a href='/home'>Home</a>
           <a href='/'>Movies</a>
         </div>
       ) : null}
